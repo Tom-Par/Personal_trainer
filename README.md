@@ -1,4 +1,4 @@
-# Personal Trainer One‑Pager — Short README
+# Personal Trainer One‑Pager
 
 > **Overview**
 

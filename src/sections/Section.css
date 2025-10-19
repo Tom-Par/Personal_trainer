@@ -1,0 +1,48 @@
+/* ---- Base tokens you can tweak ---- */
+:root{
+  --section-max: 64rem;        /* ~ Tailwind max-w-5xl */
+  --section-px: 1rem;          /* px-4 */
+  --section-py: 4rem;          /* py-16 */
+  --section-py-md: 6rem;       /* md:py-24 */
+  --section-title-mt: 1.5rem;  /* mt-6 */
+}
+
+/* Anchor offset + vertical rhythm */
+section{
+  scroll-margin-top: 6rem;                 /* scroll-mt-24 */
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+@media (min-width: 768px){
+  section{
+    padding-top: var(--section-py-md);
+    padding-bottom: var(--section-py-md);
+  }
+}
+
+/* Center & contain the first direct child (acts like the old container div) */
+section > *:first-child{
+  max-width: var(--section-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--section-px);
+  padding-right: var(--section-px);
+}
+
+/* Title styles: if the first child contains an h2, style it like before */
+section > *:first-child > h2{
+  font-weight: 700;             /* font-bold */
+  letter-spacing: -0.01em;      /* tracking-tight-ish */
+  line-height: 1.2;
+  font-size: 1.5rem;            /* text-2xl */
+}
+@media (min-width: 768px){
+  section > *:first-child > h2{
+    font-size: 1.875rem;        /* md:text-3xl */
+  }
+}
+
+/* Content spacing after a title */
+section > *:first-child > h2 + *{
+  margin-top: var(--section-title-mt);     /* mt-6 */
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export default function Pricing() {
   const tiers = [
     { name: 'Starter', price: '€129 / 4 weeks', features: ['Plan + videos', 'Weekly check‑in'], highlight: false },
@@ -18,7 +17,7 @@ export default function Pricing() {
             <ul className="mt-4 space-y-2 text-sm text-neutral-700 list-disc list-inside">
               {t.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#contact" className="mt-4 inline-block w-full rounded-lg bg-black text-white px-4 py-2 text-center">Choose</a>
+            <a href="#contact" className="mt-4 inline-block w-full rounded-lg bg-black text-white px-4 py-2 text-center !text-white">Choose</a>
           </div>
         ))}
       </div>
